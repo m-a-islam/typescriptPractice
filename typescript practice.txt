@@ -1,0 +1,15 @@
+console.log(fixDecimalNumberInput('11,10,01'));
+
+function fixDecimalNumberInput(text:string): any{
+    const splittedString: string[] = text.split(','); // spliting the string into array on the basis of comma. The more commas the more array elements. for example 11,10,01 would be a[0]=11,a[1]=10, a[2]=01.
+    let fixedString: string = '';
+    if(splittedString.length ===1){ // without comma
+        fixedString = splittedString[0];
+    }else if(splittedString.length >1){ //with comma
+        fixedString = splittedString[0]+',';
+        for(let i=1; i <= splittedString.length; i++){ // concatinating multiple commas other than position '0'
+            fixedString += splittedString[i];
+        }
+    }
+    return parseFloat(fixedString.replace(',','.'));
+}
