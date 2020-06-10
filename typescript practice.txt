@@ -13,3 +13,5 @@ function fixDecimalNumberInput(text:string): any{
     }
     return parseFloat(fixedString.replace(',','.'));
 }
+
+https://jsfiddle.net/emkey08/zgvtjc51
