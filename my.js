@@ -17,6 +17,8 @@ function anyKey(ev) {
     if (char == 190) {
         ev.preventDefault();
     }
+    if (char > 31 && (char < 48 || char > 57))
+            ev.preventDefault();
     let s = String.fromCharCode(char);
     log(s);
 }
@@ -24,3 +26,12 @@ function anyKey(ev) {
 function entr(en) {
     log(char.value);
 }
+
+function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+
+         return true;
+      }
