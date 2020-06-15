@@ -15,3 +15,7 @@ function fixDecimalNumberInput(text:string): any{
 }
 
 https://jsfiddle.net/emkey08/zgvtjc51
+
+
+// link for checkbox and remove value 
+https://stackoverflow.com/questions/7209326/clear-value-of-text-input-if-checkbox-is-checked-restore-value-if-unchecked-usin
